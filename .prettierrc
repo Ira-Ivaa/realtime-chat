@@ -1,0 +1,12 @@
+{
+    "overrides": [
+        {
+            "files": "Dockerfile",
+            "options": { "parser": "none" }
+        },
+        {
+            "files": ".dockerignore",
+            "options": { "parser": "none" }
+        }
+    ]
+}

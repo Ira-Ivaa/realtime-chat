@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chat</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="icon.avif" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- === Аутентификация === -->
+      <div id="auth-screen" class="screen active">
+        <h1 class="auth-text">Вход / Регистрация</h1>
+        <form id="auth-form">
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="password" id="password" placeholder="Пароль" required />
+          <input
+            type="text"
+            id="name"
+            placeholder="Nickname (только для регистрации)"
+          />
+          <div class="buttons">
+            <button type="submit" data-action="login">Войти</button>
+            <button type="submit" data-action="register">Регистрация</button>
+          </div>
+        </form>
+        <p id="auth-error" class="error"></p>
+      </div>
+      <!-- === Список Чатов === -->
+      <div id="chats-screen" class="screen">
+        <header>
+          <button id="logout">Выйти</button>
+          <h1 id="username"></h1>
+        </header>
+        <form id="chat-created-form">
+          <input
+            type="text"
+            id="chat"
+            placeholder="Новый чат..."
+            required
+            minlength="3"
+            maxlength="20"
+          />
+          <button type="submit">Создать чат</button>
+        </form>
+
+        <form id="chat-join-form">
+          <input
+            type="number"
+            id="join-id"
+            placeholder="ID чата для входа..."
+            required
+            min="1"
+          />
+          <button type="submit">Войти по ID</button>
+        </form>
+        <ul id="chats-list"></ul>
+        <footer>
+          <p>Всего: <span id="total">0</span></p>
+        </footer>
+      </div>
+      <!-- === Чат === -->
+      <section id="chat-screen" class="screen">
+        <button id="back">✕</button>
+        <form id="chat-invite-form">
+          <input
+            type="email"
+            id="invite-email"
+            placeholder="Email друга..."
+            required
+            min="1"
+          />
+          <button type="submit">Пригласить</button>
+        </form>
+        <ul id="messages" class="chat-container"></ul>
+        <form id="chat-form" action="">
+          <input id="messageInput" placeholder="Сообщение" />
+          <button type="submit">Отправить</button>
+        </form>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

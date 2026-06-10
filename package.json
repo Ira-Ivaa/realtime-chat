@@ -1,0 +1,33 @@
+{
+  "name": "realtime-chat",
+  "version": "1.0.0",
+  "description": "Многопользовательский чат в реальном времени на Express, WebSocket и SQLite",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon ./src/server.js"
+  },
+  "keywords": [
+    "chat",
+    "websocket",
+    "express",
+    "sqlite",
+    "jwt"
+  ],
+  "author": "Irina Davidenko",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "joi": "^18.0.2",
+    "jsonwebtoken": "^9.0.3",
+    "sqlite3": "^5.1.7",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
