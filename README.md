@@ -96,8 +96,6 @@ public/        фронтенд (index.html, script.js, style.css)
 | PATCH  | `/api/message/:chatId/:messageId/update` | изменить             |
 | DELETE | `/api/message/:chatId/:messageId/delete` | удалить              |
 
-WebSocket: подключение `ws://<host>?token=<JWT>`, подписка на чат сообщением `{ "type": "subscribe", "chatId": "<id>" }`.
-
 ## Ограничения (учебный проект)
 
 - В чат можно вступить, зная его числовой ID — закрытых/приватных чатов нет.
